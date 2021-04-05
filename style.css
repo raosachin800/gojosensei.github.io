@@ -1,0 +1,327 @@
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#background_video {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#video_cover {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: url("video_cover.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#video_controls {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#play img {
+  width: 100px;
+}
+#pause img {
+  width: 90px;
+}
+#pause {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #video_controls {
+    display: none;
+  }
+}
+
+/* Demo page specific styles */
+
+#container {
+  height: 100%;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#main_content {
+  z-index: 2;
+  position: relative;
+}
+
+#main_content h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  font-size: 35px;
+}
+
+#main_content .sub_head {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+
+#main_content .info {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#links {
+  margin-top: 50px;
+}
+
+#links a {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 61px;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin: 10px;
+  font-size: 12px;
+}
+#footer a:first-child {
+  float: left;
+}
+#footer a:last-child {
+  float: right;
+}
+
+/* -------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  height: 100vh;
+  /* background-image: url(./images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg); */
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f4f9f9;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bio {
+  color: white;
+  margin-left: 0%;
+  margin-top: 15%;
+  margin-right: 10%;
+  text-align: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.bio_header {
+  text-align: right;
+}
+
+.bio_header h3 {
+  font-size: 3.6rem;
+}
+
+.bio_image {
+  width: 60%;
+}
+
+.bio_image img {
+  height: 100%;
+  width: 80%;
+}
+/* Services */
+
+.services {
+  background-color: #f4f9f9;
+  padding-top: 0.5rem;
+  height: 100vh;
+}
+
+.services_tab {
+  margin-top: 3%;
+}
+
+.q_services {
+  text-align: center;
+  align-items: center;
+}
+
+.q_services h2 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+}
+
+.service_detail li {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  height: 350px;
+  padding: 1rem 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 10px #999292;
+  border-radius: 8px;
+}
+
+.service_detail {
+  text-align: left;
+}
+
+.s_icon img {
+  background-color: aqua;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.service_name,
+.service_detail {
+  margin-top: 1.2rem;
+}
+
+/* --------------------For Mobile---------------------------------- */
+@media only screen and (max-width: 430px) {
+  .grid {
+    width: 90%;
+    grid-template-columns: repeat(1, 200px);
+  }
+  .bio {
+    display: grid;
+  }
+
+  .bio {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .bio_header {
+    text-align: center;
+  }
+
+  .bio_header h3 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .bio_image {
+    margin-top: 2rem;
+    width: 50%;
+  }
+
+  .bio_image img {
+    height: 100%;
+    width: 180%;
+  }
+  .bio {
+    color: #f4f9f9;
+    margin-left: 2%;
+  }
+  .services {
+    background-color: #f4f9f9;
+    padding-top: 0.5rem;
+    height: 100%;
+  }
+  .q_services h2 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+}
+/* tablets */
+@media only screen and (max-width: 765px) {
+  .bio {
+    display: grid;
+  }
+
+  .bio_header {
+    text-align: left;
+    margin-left: 2rem;
+    line-height: rem;
+  }
+  .bio_header h3 {
+    font-size: 3rem;
+  }
+  .bio_image {
+    margin-top: 4rem;
+    margin-left: 1.2rem;
+  }
+  .bio_image img {
+    height: 300px;
+    width: 400px;
+  }
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 300px);
+  }
+  .services {
+    background-color: #f4f9f9;
+    padding-top: 0.5rem;
+    height: 100%;
+  }
+}
